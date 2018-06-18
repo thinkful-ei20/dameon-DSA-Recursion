@@ -20,3 +20,24 @@ let StringSplitter = (string,seperator) => {
 };
 
 console.log(StringSplitter('string of strings',' '));
+
+
+
+let splitter = (string,seperator) => {
+  let array = [];
+  let index = 0;
+  
+
+  for(let i = 0; i < string.length; i++){
+    if (string.charAt(i)===seperator){
+      array.push(string.slice(index,i));
+      index = i+1;
+    }
+  }
+  array.push(string.slice(index));
+  return array;
+};
+console.log(splitter('string of strings'," "));
+
+
+
