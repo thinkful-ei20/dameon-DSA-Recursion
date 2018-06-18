@@ -9,16 +9,14 @@
 let stringSplitter = (string,seperator) => {
   if(string.length === 0) {return [];}
   let newSeperator = string.indexOf(seperator);
-  if (newSeperator === -1 ){return [string];}
-  console.log(newSeperator);
+  if (newSeperator === -1 ){return [string];}  
   return [string.slice(0,newSeperator), ...stringSplitter(string.slice(newSeperator+1),seperator)];
 };
 
-//console.log(stringSplitter('string of strings',' '));
+console.log(stringSplitter('string of strings',' '));
 
 let StringSplitter = (string,seperator) => {
-  let array = string.split(seperator);
-  return array;
+  return string.split(seperator);  
 };
 
 console.log(StringSplitter('string of strings',' '));
